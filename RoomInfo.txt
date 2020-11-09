@@ -1,0 +1,15 @@
+Rooms{roomNumber=101, type='VIP', price/day/client=500000} Price of room 101: 2500000 Staying duration: 5
+[Clients{name='Tho', id='dcmm tml', age=20}]
+
+Rooms{roomNumber=102, type='luxury', price/day/client=300000} Price of room 102: 0 Staying duration: 0
+[]
+
+Rooms{roomNumber=103, type='luxury', price/day/client=300000} Price of room 103: 0 Staying duration: 0
+[]
+
+Rooms{roomNumber=104, type='normal', price/day/client=150000} Price of room 104: 0 Staying duration: 0
+[]
+
+Rooms{roomNumber=105, type='normal', price/day/client=150000} Price of room 105: 0 Staying duration: 0
+[]
+

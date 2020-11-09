@@ -158,5 +158,7 @@ public class Rooms {
     public ArrayList<Clients> getClientsList(){
         return clientsList;
     }
+    public void deletedClient(){
 
+    }
 }

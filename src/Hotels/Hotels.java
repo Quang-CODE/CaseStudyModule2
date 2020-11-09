@@ -68,12 +68,12 @@ public class Hotels {
             System.out.println("The price of room " + a.getRoomNumber() +":" + a.getType()*a.checkClient()*a.getDuration());
             a.getClientsInfo();
             System.out.println("Staying duration:" + a.getDuration());
+            System.out.println();
 
         }
     }
     public void showAllClientsInfo(ArrayList<Rooms> myRooms){
         for(Rooms a:myRooms){
-            System.out.println(a.toString());
             a.getClientsInfo();
             System.out.println();
         }
@@ -105,23 +105,15 @@ public class Hotels {
         }
 
     }
-    public Clients getClientByName(ArrayList<Rooms> myRooms,String name){
-        Clients target = null;
-        for(Rooms a:myRooms){
-            if(name.equals(a.getClientUsingName(name).getName()))
-                target = a.getClientUsingName(name);
+    public void getClientByName(ArrayList<Rooms> myRooms,String name){
+        for(Rooms a:myRooms) {
+            if (a.getClientUsingName(name) != null) {
+                System.out.println(a.getClientUsingName(name).toString());
             }
-        return target;
-        }
-    public Rooms getRoomUsingRoomNumber(ArrayList<Rooms> myRooms,int number){
-        Rooms target = null;
-        for(Rooms a:myRooms){
-            if(a.getRoomNumber() == number){
-                target = a;
+
             }
         }
-        return target;
-    }
+
     public void removeClientsFromRoom(ArrayList<Rooms> roomList){
         System.out.println("Enter room number");
         int input = checkInteger.checkIfInt();
@@ -132,18 +124,18 @@ public class Hotels {
             }
         }
     }
-    public void editClientUsingName(ArrayList<Rooms> roomList){
-        System.out.println("Enter client name to edit");
-        String name = scanner.nextLine();
+    public void editClientUsingName(ArrayList<Rooms> roomList,String name){
         for(Rooms a:roomList){
-            if(name.equals(a.getClientUsingName(name))){
-                System.out.println("Re-enter client name");
-                a.getClientUsingName(name).setName(scanner.nextLine());
-                System.out.println("Re-enter client ID");
-                a.getClientUsingName(name).setId(scanner.nextLine());
-                System.out.println("Re-enter client age");
-                a.getClientUsingName(name).setAge(checkInteger.checkIfInt());
-                System.out.println("Done!!!");
+            if(a.getClientUsingName(name) != null){
+                a.getClientsList().remove(a.getClientUsingName(name));
+                a.addClient(a.createClient());
+//                System.out.println("Re-enter client name");
+//                a.getClientUsingName(name).setName(scanner.nextLine());
+//                System.out.println("Re-enter client ID");
+//                a.getClientUsingName(name).setId(scanner.nextLine());
+//                System.out.println("Re-enter client age");
+//                a.getClientUsingName(name).setAge(checkInteger.checkIfInt());
+//                System.out.println("Done!!!");
             }
         }
     }

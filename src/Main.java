@@ -33,15 +33,15 @@ public class Main {
             System.out.println("---MENU---");
             System.out.println("0.Hotel info");
             System.out.println("1.Book hotel room");
-            System.out.println("2.Using hotel services");
-            System.out.println("3.Get client info using name");
-            System.out.println("4.Display all rooms info");
-            System.out.println("5.Remove clients from room");
-            System.out.println("6.Check room price");
-            System.out.println("7.Edit client using name");
-            System.out.println("8.Show active services");
-            System.out.println("9.Create file contain clients information");
-            System.out.println("10.Exit");
+//            System.out.println("2.Using hotel services");
+//            System.out.println("3.Get client info using name");
+            System.out.println("2.Display all rooms info");
+            System.out.println("3.Remove clients from room");
+            System.out.println("4.Check room price");
+//            System.out.println("7.Edit client using name");
+//            System.out.println("8.Show active services");
+            System.out.println("5.Create file contain clients information");
+            System.out.println("6.Exit");
             switch (Integer.parseInt(scanner.nextLine())) {
                 case 0:
                     System.out.println(myHotel.toString());
@@ -50,45 +50,46 @@ public class Main {
                     myHotel.showAvailableRoom(myRooms);
                     myHotel.checkInClient(myRooms);
                     break;
+//                case 2:
+//                    myHotel.showAllClientsInfo(myRooms);
+//                    System.out.println("Enter client room");
+//                    int searchedForRoomNumber = checkInteger.checkIfInt();
+//                    Rooms roomOfClientUsingService = myHotel.getRoomUsingRoomNumber(myRooms,searchedForRoomNumber);
+//                    System.out.println("Enter client name");
+//                    String name = scanner.nextLine();
+//                    Clients clientUsingService = myHotel.getClientByName(myRooms,name);
+//                    System.out.println("Hotel services included: Buffets, Golf, Sightseeing. Which one would you like to choose?");
+//                    String typeOfService = scanner.nextLine();
+//                    Services service = myServices.getService(typeOfService,clientUsingService,roomOfClientUsingService);
+//                    servicesList.add(service);
+//                    break;
+//                case 3:
+//                    System.out.println("Enter client name");
+//                    String input = scanner.nextLine();
+//                    myHotel.getClientByName(myRooms,input).toString();
+//                    break;
                 case 2:
-                    myHotel.showAllClientsInfo(myRooms);
-                    System.out.println("Enter client room");
-                    int searchedForRoomNumber = checkInteger.checkIfInt();
-                    Rooms roomOfClientUsingService = myHotel.getRoomUsingRoomNumber(myRooms,searchedForRoomNumber);
-                    System.out.println("Enter client name");
-                    String name = scanner.nextLine();
-                    Clients clientUsingService = myHotel.getClientUsingName(myRooms,name);
-                    System.out.println("Hotel services included: Buffets, Golf, Sightseeing. Which one would you like to choose?");
-                    String typeOfService = scanner.nextLine();
-                    Services service = myServices.getService(typeOfService,clientUsingService,roomOfClientUsingService);
-                    servicesList.add(service);
-                    break;
-                case 3:
-                    System.out.println("Enter client name");
-                    String input = scanner.nextLine();
-                    System.out.println(myHotel.getClientUsingName(myRooms,input).toString());
-                    break;
-                case 4:
                     myHotel.getAllRoomsInfo(myRooms);
                     break;
-                case 5:
+                case 3:
                     myHotel.removeClientsFromRoom(myRooms);
                     break;
-                case 6:
+                case 4:
                     myHotel.roomPrice(myRooms);
                     break;
-                case 7:
-                    myHotel.showAllClientsInfo(myRooms);
-                    myHotel.editClientUsingName(myRooms);
-                    break;
-                case 8:
-                    myServices.showActiveServices(servicesList);
-                case 9:
+//                case 7:
+//                    myHotel.showAllClientsInfo(myRooms);
+//                    myHotel.editClientUsingName(myRooms);
+//                    break;
+//                case 8:
+//                    myServices.showActiveServices(servicesList);
+//                    break;
+                case 5:
                     File file = exportFile.getFile();
                     exportFile.writeInfoToFile(myRooms,file);
                     exportFile.readFile(file);
                     break;
-                case 10:
+                case 6:
                     System.exit(1);
             }
         }while(true);

@@ -105,9 +105,10 @@ public class Hotels {
         }
 
     }
-    public Clients getClientUsingName(ArrayList<Rooms> myRooms,String name){
+    public Clients getClientByName(ArrayList<Rooms> myRooms,String name){
         Clients target = null;
         for(Rooms a:myRooms){
+            if(name.equals(a.getClientUsingName(name).getName()))
                 target = a.getClientUsingName(name);
             }
         return target;
@@ -127,6 +128,7 @@ public class Hotels {
         for (Rooms a:roomList){
             if(input == a.getRoomNumber()){
                 a.removeClient();
+                a.setDuration(0);
             }
         }
     }

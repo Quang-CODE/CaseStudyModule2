@@ -36,17 +36,12 @@ public class Buffets implements Services {
         this.client = client;
         this.room = room;
     }
-    public String getClientName(){
-        return this.client.getName();
-    }
-    public int getRoomNumber(){
-        return this.room.getRoomNumber();
-    }
+
     @Override
     public void getClientInfo(){
         getService();
         System.out.println("Price: " + getPrice());
-        System.out.println("Reserved by: " + getClientName());
-        System.out.println("Room: " + getRoomNumber());
+        System.out.println("Reserved by: " + getClient().getName());
+        System.out.println("Room: " + getRoom().getRoomNumber());
     }
 }

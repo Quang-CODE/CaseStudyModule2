@@ -1,5 +1,5 @@
 Rooms{roomNumber=101, type='VIP', price/day/client=500000} Price of room 101: 2500000 Staying duration: 5
-[Clients{name='Tho', id='dcmm tml', age=20}]
+[Clients{name='Quang', id='2341', age=45}]
 
 Rooms{roomNumber=102, type='luxury', price/day/client=300000} Price of room 102: 0 Staying duration: 0
 []

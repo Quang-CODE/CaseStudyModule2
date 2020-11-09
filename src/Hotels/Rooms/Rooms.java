@@ -72,7 +72,7 @@ public class Rooms {
     Scanner scanner = new Scanner(System.in);
     CheckInteger checkInteger = new CheckInteger();
     ArrayList<Clients> clientsList = new ArrayList<>(MaxPeople);
-    ArrayList<Services> servicesList = new ArrayList<>();
+
 
     public void addClient(Clients a) {
         if (clientsList.size() < MaxPeople) {

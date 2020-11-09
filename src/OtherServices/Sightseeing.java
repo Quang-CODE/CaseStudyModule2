@@ -13,6 +13,14 @@ public class Sightseeing implements Services {
         this.room = room;
     }
 
+    public Clients getClient() {
+        return client;
+    }
+
+    public Rooms getRoom() {
+        return room;
+    }
+
     @Override
     public void getService() {
         System.out.println("This client will go sightseeing");
@@ -31,7 +39,7 @@ public class Sightseeing implements Services {
     public void getClientInfo(){
         getService();
         System.out.println("Price: " + getPrice());
-        System.out.println("Reserved by: " + this.client.getName());
-        System.out.println("Room: " + this.room.getRoomNumber());
+        System.out.println("Reserved by: " + getClient().getName());
+        System.out.println("Room: " + getRoom().getRoomNumber());
     }
 }

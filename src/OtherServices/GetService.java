@@ -40,6 +40,7 @@ public class GetService {
     public void showActiveServices(ArrayList<Services> servicesList){
         for (Services a: servicesList) {
             a.getClientInfo();
+
         }
     }
 }
